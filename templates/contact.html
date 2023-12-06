@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block title %}home page{% endblock title %}
+{% block body %}
+<div class="container-fluid px-0">
+<img src="https://images.unsplash.com/photo-1682687218904-de46ed992b58?q=80&w=2486&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+class ="d-block w-100" alt="..." height="400" weidth="600" >
+</div>
+<div class="container my-4">
+  <form class="row g-3" method="post" action="/contact">
+   {% csrf_token %}
+    <div class="col-md-6">
+      <label for="FirstName" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="FirstName" name="FirstName">
+    </div>
+    <div class="col-md-6">
+      <label for="LastName" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="LastName" name="LastName">
+    </div>
+    <div class="col-md-6">
+      <label for="Province" class="form-label">Province </label>
+     
+      <select id="Province" class="form-select" name="Province">
+        <option selected>Province no.1</option>
+        <option selected>Province no.2</option>
+        <option selected>Province no.3</option>
+        <option selected>Province no.4</option>
+        <option selected>Province no.5</option>
+        <option selected>Province no.6</option>
+        <option selected>Province no.7</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="City" class="form-label">City</label>
+      
+      <select id="City" class="form-select" name="City">
+        <option selected>Kathmandu</option>
+        <option selected>Pokhara</option>
+        <option selected>Bharatpur</option>
+        <option selected>Biratnagar</option>
+        <option selected>Birgunj</option>
+        <option selected>Nepalgunj</option>
+        <option selected>Itahari</option>
+        <option selected>Dharan</option>
+        <option selected>Butwal</option>
+        <option selected>Bhairahawa</option>
+        <option selected>Nepalgunj</option>
+        <option selected>Ghorahi</option>
+        <option selected>Mahendranagar</option>
+        <option selected>Dipayal</option>
+        <option selected>Gorkha</option>
+        <option selected>others</option>
+
+      </select>  
+    </div>
+    <div class="col-12">
+      <label for="Address" class="form-label">Address</label>
+      <input type="text" class="form-control" id="Address" placeholder="kalimati" name="Address">
+    </div>
+    <div class="col-12">
+      <label for="Address2" class="form-label">Address 2</label>
+      <input type="text" class="form-control" id="Address2" placeholder="kalimati chowk" name="Address2">
+    </div>
+    
+    <div class="col-md-4">
+      <label for="EmailAddress" class="form-label">Email Address</label>
+      <input type="text" class="form-control" id="EmailAddress" placeholder="@gmail.com" name="EmailAddress">
+      
+    </div>
+    <div class="col-md-2">
+      <label for="PhoneNumber" class="form-label">Phone Number</label>
+      <input type="number" class="form-control" id="PhoneNumber" name="PhoneNumber">
+    </div>
+    <div class="form-group">
+      <label for="desc">Please Tell Us About Your Ideal Property You Are Looking For</label>
+      <textarea class="form-control" id="desc" name="desc"></textarea>
+  </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          Check me out
+        </label>
+      </div>
+      
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">SUBMIT</button>
+    </div>
+    
+  </form>
+</div>
+{% endblock body %} 
